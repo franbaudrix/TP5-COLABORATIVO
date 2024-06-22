@@ -1,3 +1,7 @@
+#ATENCION: Para que se traduzca el texto del ingles, instale la
+#herramienta trans usando:  apt get-install trans (el codigo funciona igualmente, 
+#pero en ese apartado es posible que muetre un error)
+
 #GRAFICOS PARA RECIBIR EL INPUT DE CIUDAD
 if CIUDAD=$(zenity --entry \
 --title="Ver clima de una ciudad" \
