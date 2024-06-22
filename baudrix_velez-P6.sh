@@ -3,7 +3,7 @@ if CIUDAD=$(zenity --entry \
 --title="Ver clima de una ciudad" \
 --text="Escriba el nombre de la ciudad:")
   then echo ""
-else echo "No ha especifiocado ningún nombre"
+else echo "No ha especificado ningún nombre"
 fi
 
 
@@ -15,7 +15,7 @@ CIUDAD=$(echo "$CIUDAD" | sed 's/ /%20/g')
 
 URL="https://api.weatherapi.com/v1/current.json?key=$API_KEY&q=$CIUDAD&aqi=yes"
 
-#toma los valores de la api
+#almacena la respuesta de una llamada a la API 
 response=$(curl -s "$URL")
 
 
@@ -71,5 +71,5 @@ done
 
 #GRAFICOS PARA MOSTRAR LA INFORMACION DEL CLIMA
 zenity --info --no-wrap \
---text="CLIMA $CIUDAD.\n$TEXT \n\nTemperatura: $TEMPERATURA°C$espacio1 Direccion del viento: $VIENTO_DIR\nHumedad del $HUMEDAD%$espacio2 Viento: $VIENTO_VEL km/h\n\n Actualizado al $FECHA"
+--text="CLIMA $CIUDAD.\n\n$TEXT \n\nTemperatura: $TEMPERATURA°C$espacio1 Direccion del viento: $VIENTO_DIR\nHumedad del $HUMEDAD%$espacio2  Viento: $VIENTO_VEL km/h\n\n Actualizado al $FECHA"
 
