@@ -1,5 +1,5 @@
 ```console
-                            Trabajo Practico N°5
+                    Trabajo Practico N°5
 
 	El siguiente trabajo practico fue creado por Baudrix
 Fernandez, Franco Matias y Velez Ali, Karim.
